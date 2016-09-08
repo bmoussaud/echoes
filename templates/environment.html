@@ -1,0 +1,8 @@
+<!doctype html>
+<title>Hello X from Flask</title>
+<h1>Dumps the environment</h1>
+  <ul>
+      {% for key, value in environ.iteritems() %}
+      <li>{{ key }}:{{ value }}</li>
+      {% endfor %}
+</ul>
