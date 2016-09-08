@@ -1,8 +1,35 @@
-<!doctype html>
-<title>Hello X from Flask</title>
-<h1>Dumps the environment</h1>
-  <ul>
-      {% for key, value in environ.iteritems() %}
-      <li>{{ key }}:{{ value }}</li>
-      {% endfor %}
+<html>
+<head>
+    <title>Hello world!</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: white;
+            #text-align: center;
+            padding: 50px;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        #logo {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<img id="logo" src="/static/logo.png"/>
+<h2>Environment</h2>
+<p>the application is running on ['{{ hostname }}'] with the following environment variables:</p>
+<ul>
+    {% for key, value in environ.iteritems() %}
+        <li>{{ key }}:{{ value }}</li>
+    {% endfor %}
 </ul>
+
+<h2>/etc/hosts file</h2>
+{% for host in hosts %}
+    <pre>{{ host }}</pre>
+{% endfor %}
+</body>
+</html>
