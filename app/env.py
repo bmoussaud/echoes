@@ -15,7 +15,6 @@ def dump_environment():
     return render_template('environment.html', environ=os.environ)
 
 if __name__ == '__main__':
-    app.run()
-
+    app.run(debug=True,host='0.0.0.0')
 
 
