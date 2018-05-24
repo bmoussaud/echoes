@@ -2,6 +2,9 @@
 #https://docs.openshift.org/latest/dev_guide/builds/build_hooks.html
 
 echo "Before assembling"
+echo "uname..."
+uname -a
+echo "find..."
 find .
 echo "-------"
 mkdir -p /tmp/tools
@@ -9,6 +12,7 @@ curl https://github.com/jchraibi/tools/blob/master/zip?raw=true -L -o /tmp/tools
 chmod a+x /tmp/tools/zip
 
 /tmp/tools/zip
+echo "---"
 
 
 #sed "s/@APP_VERSION@/$APP_VER/g" /tmp/src/xebialabs/work/deploymentconfig-cart.yaml.bak > /tmp/src/xebialabs/work/deploymentconfig-cart.yaml
