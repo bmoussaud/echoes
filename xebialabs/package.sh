@@ -7,6 +7,10 @@ uname -a
 echo "find..."
 find .
 echo "-------"
+pwd
+find /app
+find /xebialabs
+
 mkdir -p /tmp/tools
 curl https://github.com/jchraibi/tools/blob/master/zip?raw=true -L -o /tmp/tools/zip
 chmod a+x /tmp/tools/zip
