@@ -11,13 +11,16 @@ pwd
 find /app
 find /xebialabs
 
-mkdir -p /tmp/tools
-curl https://github.com/jchraibi/tools/blob/master/zip?raw=true -L -o /tmp/tools/zip
-chmod a+x /tmp/tools/zip
-
-/tmp/tools/zip
+#mkdir -p /tmp/tools
+#curl https://github.com/jchraibi/tools/blob/master/zip?raw=true -L -o /tmp/tools/zip
+#chmod a+x /tmp/tools/zip
+echo "-zip--"
+zip
 echo "---"
 
+echo "-curl--"
+curl
+echo "---"
 
 #sed "s/@APP_VERSION@/$APP_VER/g" /tmp/src/xebialabs/work/deploymentconfig-cart.yaml.bak > /tmp/src/xebialabs/work/deploymentconfig-cart.yaml
 #sed "s/@APP_VERSION@/$APP_VER/g" /tmp/src/xebialabs/deployit-manifest.xml.bak > /tmp/src/xebialabs/deployit-manifest.xml
