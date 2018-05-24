@@ -4,11 +4,11 @@
 echo "Before assembling"
 find .
 echo "-------"
-mkdir -p /tmp/src
-curl https://github.com/jchraibi/tools/blob/master/zip?raw=true -L -o /tmp/src/zip
-chmod a+x /tmp/src/zip
+mkdir -p /tmp/tools
+curl https://github.com/jchraibi/tools/blob/master/zip?raw=true -L -o /tmp/tools/zip
+chmod a+x /tmp/tools/zip
 
-/tmp/src/zip
+/tmp/tools/zip
 
 
 #sed "s/@APP_VERSION@/$APP_VER/g" /tmp/src/xebialabs/work/deploymentconfig-cart.yaml.bak > /tmp/src/xebialabs/work/deploymentconfig-cart.yaml
