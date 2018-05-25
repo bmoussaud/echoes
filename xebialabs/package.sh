@@ -5,7 +5,7 @@ env
 echo "set"
 set
 echo "---"
-APP_VER='1.0'
+APP_VER=$OPENSHIFT_BUILD_NAME
 XLDEPLOY_URL="http://192.168.99.1:4545"
 
 echo "APP_VER      : $APP_VER"
