@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<udm.DeploymentPackage version="@APP_VERSION@" application="echoes">
+    <deployables>
+        <openshift.ResourcesFile name="deploymentconfigt" file="deploymentconfig.yaml"/>
+        <openshift.ResourcesFile name="service" file="service.yaml"/>
+        <openshift.ResourcesFile name="route" file="route.yaml"/>
+    </deployables>
+</udm.DeploymentPackage>
