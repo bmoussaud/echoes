@@ -12,7 +12,7 @@ find /app
 find /xebialabs
 
 APP_VER='1.0'
-XLDEPLOY_URL="http://192.168.64.1:4545"
+XLDEPLOY_URL="http://192.168.99.1:4545"
 
 echo "APP_VER      : $APP_VER"
 echo "XLDEPLOY_URL : $XLDEPLOY_URL"
