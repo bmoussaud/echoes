@@ -17,8 +17,9 @@ XLDEPLOY_URL="http://192.168.99.1:4545"
 echo "APP_VER      : $APP_VER"
 echo "XLDEPLOY_URL : $XLDEPLOY_URL"
 
-sed "s/@APP_VERSION@/$APP_VER/g" /xebialabs/deploymentconfig.yaml > /xebialabs/deploymentconfig.yaml
-sed "s/@APP_VERSION@/$APP_VER/g" /xebialabs/deployit-manifest.xml > /xebialabs/deployit-manifest.xml
+sed -i.bak "s/@APP_VERSION@/$APP_VER/g" /xebialabs/deploymentconfig.yaml
+sed -i.bak "s/@APP_VERSION@/$APP_VER/g" /xebialabs/deployit-manifest.xml
+
 echo "----- deployit-manifest --"
 cat /xebialabs/deployit-manifest.xml
 echo "-----"
