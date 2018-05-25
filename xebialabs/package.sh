@@ -1,6 +1,6 @@
 #oc set build-hook bc/echoes-bc --post-commit --script="sh /xebialabs/package.sh"
 #https://docs.openshift.org/latest/dev_guide/builds/build_hooks.html
-find / -ls
+find / 
 
 APP_VER='1.0'
 XLDEPLOY_URL="http://192.168.99.1:4545"
