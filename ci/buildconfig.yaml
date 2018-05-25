@@ -1,0 +1,36 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  creationTimestamp: '2018-05-25T07:24:36Z'
+  labels:
+    build: component
+    echoes: app
+  name: echoes-bc
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'echoes-is:latest'
+  postCommit:
+    command:
+      - sh
+      - /xebialabs/package.sh
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: /
+    git:
+      uri: 'https://github.com/bmoussaud/echoes'
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: DockerImage
+        name: 'jazzdd/alpine-flask:python3'
+      noCache: true
+    type: Docker
+  triggers:
+    - type: ConfigChange
+status:
+  lastVersion: 7
+
