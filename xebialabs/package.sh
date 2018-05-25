@@ -19,6 +19,9 @@ echo "XLDEPLOY_URL : $XLDEPLOY_URL"
 
 sed "s/@APP_VERSION@/$APP_VER/g" /xebialabs/deploymentconfig.yaml > /xebialabs/deploymentconfig.yaml
 sed "s/@APP_VERSION@/$APP_VER/g" /xebialabs/deployit-manifest.xml > /xebialabs/deployit-manifest.xml
+echo "----- deployit-manifest --"
+cat /xebialabs/deployit-manifest.xml
+echo "-----"
 
 echo "Creating DAR file for XLDEPLOY"
 cd /xebialabs; zip -r /tmp/xebialabs.dar ./*; cd ..;
