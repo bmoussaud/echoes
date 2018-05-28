@@ -8,7 +8,6 @@ RUN groupadd flaskgroup && useradd -m -g flaskgroup -s /bin/bash flask
 
 RUN pip install flask
 EXPOSE 5000
-ENTRYPOINT ["python", "/app/app.py"]
 COPY app  /app/
 
 RUN chown -R flask:flaskgroup /app
@@ -17,6 +16,8 @@ WORKDIR /app
 
 #ALPINE RUN apk add --no-cache curl zip
 COPY xebialabs  /xebialabs
+
+CMD [ "python", "app.py"]
 
 
 
