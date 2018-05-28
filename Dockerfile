@@ -10,12 +10,11 @@ RUN groupadd flaskgroup && useradd -m -g flaskgroup -s /bin/bash flask
 RUN mkdir -p /home/flask/app/web
 WORKDIR /home/flask/app/web
 
-
 RUN pip install flask
 
 EXPOSE 5000
 
-COPY app /home/flask/app/web/app
+COPY app /home/flask/app/web/app/
 
 RUN chown -R flask:flaskgroup /home/flask
 USER flask
