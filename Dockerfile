@@ -13,6 +13,7 @@ COPY app  /app/
 
 RUN chown -R flask:flaskgroup /app
 USER flask
+WORKDIR /app
 
 #ALPINE RUN apk add --no-cache curl zip
 COPY xebialabs  /xebialabs
