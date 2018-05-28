@@ -21,12 +21,13 @@
 <img id="logo" src="/static/logo.png"/>
 <h2>Echo: Environment</h2>
 <p>The 'echoes' application is running on ['{{ hostname }}'] with the following environment variables:</p>
+<!--
 <ul>
     {% for key, value in environ.iteritems() %}
         <li>{{ key }}:{{ value }}</li>
     {% endfor %}
 </ul>
-
+-->
 <h2>Echo: /etc/hosts file</h2>
 {% for host in hosts %}
     <pre>{{ host }}</pre>
