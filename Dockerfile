@@ -1,4 +1,4 @@
-FROM jazzdd/alpine-flask:python3
+FROM jazzdd/alpine-flask:latest
 MAINTAINER Benoit Moussaud (bmoussaud@xebialabs.com)
 RUN apk add --no-cache curl zip
 COPY app  /app/
