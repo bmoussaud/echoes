@@ -1,7 +1,7 @@
 FROM python:3.6.2
 MAINTAINER Benoit Moussaud (bmoussaud@xebialabs.com)
 
-RUN apt-get update && apt-get install -y python-pip python-dev curl zip
+RUN apt-get update && apt-get install -y  curl zip
 
 # Create the group and user to be used in this container
 RUN groupadd flaskgroup && useradd -m -g flaskgroup -s /bin/bash flask
